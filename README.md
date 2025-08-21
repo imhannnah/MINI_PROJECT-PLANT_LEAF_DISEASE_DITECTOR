@@ -12,8 +12,8 @@ An web application that automatically detects plant diseases from leaf images us
 - **🔍 Instant Disease Detection**: Upload a plant leaf image and get disease prediction in seconds
 - **🧠 CNN-Based Classification**: Deep learning model with transfer learning for high accuracy
 - **📊 Confidence Scoring**: Top-3 predictions with confidence percentages
-- **⚡ Real-time Inference**: Response time under 3 seconds
-- **🌐 Web Interface**: Clean and intuitive user interface
+- **⚡ Real-time Inference**: Response time under few seconds
+- **🌐 Web Interface**: Clean  user interface
 
 
 
