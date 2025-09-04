@@ -21,7 +21,6 @@ An web application that automatically detects plant diseases from leaf images us
 
 **Backend:**
 - Python 3.9+
-- TensorFlow/Keras 2.10+
 - Flask 2.3+
 - OpenCV
 - PIL (Pillow)
