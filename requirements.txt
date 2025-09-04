@@ -1,0 +1,9 @@
+
+flask>=2.2,<3
+werkzeug>=2.2,<3
+torch>=2.0
+torchvision>=0.15
+pillow>=9.0
+numpy>=1.23
+matplotlib>=3.0
+opencv-python>=4.5
