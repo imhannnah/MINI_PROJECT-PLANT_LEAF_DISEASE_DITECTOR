@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML template.</p>
-    <footer>
-        <p>&copy; 2023 My Website</p>
-    </footer>
-    
-</body>
-</html>
+
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Upload a leaf image</h5>
+        <form method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <input class="form-control" type="file" name="file" accept="image/*" required>
+          </div>
+          <button class="btn btn-success w-100">Predict & Show Grad-CAM</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
