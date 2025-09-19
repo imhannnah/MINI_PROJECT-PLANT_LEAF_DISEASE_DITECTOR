@@ -1,13 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>result</h1>
-    <p>This is the result page.</p>
-    
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Prediction</h5>
+        <p><strong>Class:</strong> {{ label }}</p>
+        <p><strong>Confidence:</strong> {{ '%.2f' % (conf * 100) }}%</p>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Original</p>
+            <img class="img-fluid rounded" src="{{ url_for('static', filename='uploads/' + image) }}" alt="uploaded">
+          </div>
+          <div class="col-md-6">
+            <p>Grad-CAM overlay</p>
+            <img class="img-fluid rounded" src="{{ url_for('static', filename='uploads/' + cam_image) }}" alt="gradcam">
+          </div>
+        </div>
+        <a class="btn btn-outline-success mt-3" href="{{ url_for('index') }}">Try another</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
